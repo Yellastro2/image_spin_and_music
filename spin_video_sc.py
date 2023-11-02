@@ -8,12 +8,9 @@ from moviepy.video.VideoClip import ImageClip
 from moviepy.video.compositing.CompositeVideoClip import CompositeVideoClip
 from moviepy.video.io.ImageSequenceClip import ImageSequenceClip
 
-import super_sc
-from super_sc import s_files_path
-
 s_work_dir = 'frames/'
 
-s_img_size = super_sc.s_img_size
+s_img_size = 300
 
 try:
     os.mkdir(s_work_dir)
