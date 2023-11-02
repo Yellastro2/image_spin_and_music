@@ -1,0 +1,4 @@
+aiogram~=3.0.0rc2
+moviepy~=1.0.3
+Pillow~=9.5.0
+XlsxWriter~=3.1.2
