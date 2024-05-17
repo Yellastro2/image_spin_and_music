@@ -76,7 +76,7 @@ def rotate_set(f_img, f_speed,f_id):
     return f_res
 
 def get_mask(f_name,f_size = s_img_size):
-    f_path = f'{super_sc.s_gen_masks}/{f_name}_{f_size}.png'
+    f_path = f'mask_folder/{f_name}_{f_size}.png'
     if not os.path.exists(f_path):
         with Image.open(f'res/{f_name}') as og:
             with og.resize((f_size, f_size)) as rs:
@@ -85,8 +85,8 @@ def get_mask(f_name,f_size = s_img_size):
     return f_path
 
 def spin_image(f_id = 0, f_len = 59, f_speed = 2, f_img = 'low.jpg',
-               f_audio = "sneg.mp3", f_clb = None, f_mask =super_sc.s_red_mask,
-               f_bitrate = super_sc.s_vid_bitrate,f_img_size = s_img_size,**kwargs):
+               f_audio = "sneg.mp3", f_clb = None, f_mask = None,
+               f_bitrate = '4000k',f_img_size = s_img_size,**kwargs):
     j = 0
     clips = []
     f_img_obj = crop_img(f_img,f_img_size)
